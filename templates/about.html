@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}" style="color: white;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}" style="color: yellow; padding-left: 30px;">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('translation')}}" style="color: white; padding-left: 30px;">Translation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('index')}}" style="color: white; padding-left: 30px;">Logout</a>
+        </li>
+    </ul>
+{% endblock %}
+               
+
+{% block content %}
+    <div class="banner_section layout_padding" style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: rgba(0, 0, 0, 0.63);">
+        <div class="container">
+            <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="banner_taital_main text-center" style="margin-top: -110px;">
+                            
+                            <h1 class="banner_taital" style="color: white;">About!</h1>
+                            <p class="banner_text" style="color: white; padding: 30px; text-align: justify;">
+                                In today’s globalized world, language should never be a barrier to accessing valuable video content. Our **Multilingual Video Content Transformation** platform is designed to break linguistic boundaries by converting videos into multiple languages with natural voice integration. Whether it's personal videos, educational content, corporate presentations, or online media, our system ensures that your message reaches a wider audience effortlessly.  
+
+Our platform offers two ways to translate videos: users can either upload their own video files or provide a YouTube video link for translation. The system processes the video by first extracting the audio and converting it into text using **Google Speech-to-Text API**. The extracted text is then translated into the selected language using **Google Translate API**. To provide a natural and immersive experience, the translated text is converted into speech using **gTTS (Google Text-to-Speech)**. Finally, the newly generated voice is integrated back into the original video using **MoviePy**, delivering a fully translated and dubbed version.  
+
+With high accuracy and efficiency, our solution supports multiple languages, making it an ideal tool for content creators, educators, businesses, and individuals looking to expand their reach across different linguistic audiences. No technical skills are required—just upload, select a language, and receive a fully dubbed video in minutes. By leveraging cutting-edge AI-powered technologies, we ensure seamless translations with clear and natural voice integration, helping users connect with audiences worldwide.  
+
+Join us in transforming videos and breaking language barriers, making content truly universal for everyone.
+                            </p>
+                            <h5 class="tasty_text">
+                                "Transforming Videos, Breaking Language Barriers – Language Translation for a Global Audience!"
+                            </h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
